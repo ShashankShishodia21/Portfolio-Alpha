@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat";
+    font-weight: 500;
+    background: rgb(255, 255, 255);
+    color: rgb(30, 30, 30);
+}
+
+.navbarWrapper {
+    z-index: 55555;
+    width: 100%;
+    padding: 20px 0px;
+    box-shadow: 0px 0px 50px rgb(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    position: fixed;
+    top: 0;
+}
+
+.navbar {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.logoSection,
+.menuSection {
+    flex: 1;
+    width: 50%;
+}
+
+.logoSection a {
+    font-size: 28px;
+    font-weight: 900;
+    color: black;
+    text-shadow: 0px 2px 2px rgb(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+}
+
+.menuList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 35px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.ham {
+    font-size: 28px;
+    display: none;
+    cursor: pointer;
+}
+.hamClose {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+.menuItem {
+    color: white;
+}
+.menuItem:hover {
+    color: orange;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+
+@media (max-width: 1150px) {
+    .navbar {
+        width: 96%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .navbarWrapper {
+        padding: 14px 0px;
+    }
+
+    .logoSection a {
+        font-size: 18px;
+    }
+
+    .menuSection {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        height: 100vh;
+        background: black;
+        animation: drawer 0.5s ease-in-out;
+        box-shadow: -2px 0px 10px rgb(0, 0, 0, 0.2);
+        z-index: 99999;
+        padding: 0px 40px;
+        display: none;
+    }
+    .ham {
+        display: block;
+    }
+    .hamClose {
+        display: block;
+    }
+    .menuList {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        height: 100%;
+    }
+
+    @keyframes drawer {
+        0% {
+            transform: translateX(300px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+}
+
+.container {
+    font-size: 14px;
+    padding: 40px 28px;
+    text-align: justify;
+    margin-top: 50px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin-top: 30px;
+        padding: 40px 14px;
+    }
+}
+
+.logoSection span{
+    color: crimson;
+}
+.logoSection p{
+    color: white;
+}
+
+.myVideo{
+    position: fixed;
+    transform: scale(1.8);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.section1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 120px;
+    width: 100%;
+    background: url("./images/cover.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* .sec1div0{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    z-index: 999;
+} */
+.sec1div1{
+    display: flex;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.85);
+    box-shadow: 0px 0px 50px black;
+    z-index: -1;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+.sec1div2 {
+    padding: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: justify;
+}
+.sec1div2 h1{
+    color: crimson;
+    padding-bottom: 20px;
+    font-size: 1.6em;
+    font-weight: 500;
+    font-weight: 700;
+}
+.sec1div2 p{
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: 300;
+}
+.sec1div3 {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+    text-align: center;
+    justify-content: center;
+}
+.sec1div3 img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px black;
+}
+.sec1div3 p{
+    padding: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: crimson;
+}
+.sec1div3 span{
+    color: white;
+}
+.section2 {
+    background-color: rgb(25, 25, 25);
+    padding: 40px;
+}
+.section2 h2{
+    color: crimson;
+    text-align: center;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 500;
+    padding: 40px;
+    font-weight: 700;
+}
+.sec2div1 {
+    padding: 0px;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.sec2div2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.sec2div3{
+    width: 400px;
+    padding: 30px;
+    margin: 30px;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
+    border-radius: 15px;
+    border: 4px dashed black;
+}
+.sec2div3:hover{
+    border: 4px dashed crimson;
+    
+}
+.sec2div3 p{
+    font-weight: 300;
+    font-size: 0.8em;
+}
+.sec2div3 img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    text-align: center;
+    border-radius: 15px;
+
+}
+.sec2div3 div{
+    padding: 15px;
+    font-size: 1em;
+    color: whitesmoke;
+}
+.sec2div3 h1{
+    color: crimson;
+    padding:10px;
+    font-size: 1.2em;
+}
+.section3{
+    padding: 80px;
+    background: url("./images/drop.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: black;
+    
+}
+.sec3div0{
+    border-radius: 15px;
+    background-color: rgb(10, 10, 10);
+    padding-bottom: 60px;
+} 
+.sec3div6 {
+    background-color: black;
+}
+.sec3div1 h1{
+    font-size: 1.6em;
+    color: crimson;
+    padding: 60px;
+    font-weight: 700;
+    text-align: center;
+}
+.sec3div2 {
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+}
+.sec3div3 {
+    display: flex;
+    border-radius : 25px;
+}
+.sec3div4 {
+    padding: 10px;
+    width: 300px;
+    height: 275px;
+    background-color: rgb(25,25,25);
+    align-items: center;
+    display: flex; 
+    text-align: center;
+    justify-content: center;
+    
+}
+.sec3div4 img {
+    object-fit: cover;
+    height: 225px;
+    width: 225px;
+    border-radius: 50%;
+    border: 4px dashed crimson;
+    
+}
+.sec3div5 {
+    background-color: black;
+    padding: 30px;
+    width: 300px;
+    height: 275px;
+}
+.sec3div5 h2{
+    color: crimson;
+    font-size: 1.3em;
+    padding: 10px 10px 5px 10px;
+    font-weight: 800;
+}
+.sec3div5 h3{
+    color: white;
+    font-size: 1em;
+    padding: 5px 10px 10px 10px;
+    font-weight: 500;
+}
+.sec3div5 p{
+    color: whitesmoke;
+    font-size: 0.8em;
+    padding: 0px 10px 10px 10px;
+    font-weight: 300;
+}
+.section4 {
+    background-color: rgb(25, 25, 25);
+    padding: 40px;
+}
+.section4 h1{
+    font-size: 1.6em;
+    font-weight: 500;
+    color: crimson;
+    text-align: center;
+    font-weight: 700;
+}
+.sec4div1 {
+    display: flex;
+    padding: 60px;
+}
+.sec4div2 {
+    width: 350px;
+    text-align: center;
+    margin: 40px;
+    border-radius: 15px;
+    background-color: rgb(10,10,10);
+    border: 4px dashed black;
+}
+.sec4div2:hover {
+    border: 4px dashed crimson;
+}
+.sec4div2 img{
+    height: 250px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.sec4div2 h2{
+    font-size: 1.3em;
+    font-weight: 400;
+    color: crimson;
+    padding: 10px;
+    border-bottom: 1px solid crimson;
+}
+.sec4div2 p{
+    font-size: 0.8em;
+    font-weight: 300;
+    color: whitesmoke;
+    padding: 15px;
+}
+.section5 {
+    padding: 80px;
+    background: url("./images/project.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.section5 h1{
+    font-weight: 700;
+    text-align: center;
+    color: crimson;
+    font-size: 1.6em;
+    padding: 40px;
+}
+.sec5div1 {
+    background-color: rgb(25, 25, 25);
+    padding: 20px;
+    margin: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px black;
+}
+
+.sec5div2 {
+    padding: 30px;
+    text-align: justify;
+    margin: 60px 80px 60px 80px;
+    display: flex;
+    border-radius: 15px;
+    background-color: black;
+    border: 4px dashed black;
+}
+.sec5div2:hover {
+    border: 4px dashed crimson;
+}
+.sec5div2 img{
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    border-radius: 50%;
+    border: 4px dashed crimson;
+}
+.sec5div3 {
+    padding: 50px;
+    font-size: 1em;
+    font-weight: 300;
+    color: whitesmoke;
+    justify-content: center;
+    border-left: 1px solid crimson;
+
+}
+.sec5div3 li{
+    padding: 5px 0px 5px 0px;
+}
+.sec5div3 h2{
+    color: crimson;
+    padding-bottom: 10px;
+}
+.section6 {
+    background-color: rgb(10, 10, 10);
+    text-align: center;
+}
+.section6 h1{
+    color: crimson;
+    font-size: 1.6em;
+    padding: 40px;
+    font-weight: 500;
+    font-weight: 700;
+}
+.section6 i{
+    color: orange;
+    font-size: 2em;
+    margin: 0px 50px 40px 50px;
+    border-radius: 50%;
+}
+.section6 i:hover{
+    font-size: 2.2em;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px orange;
+}
+.footer{
+    background-color:  black;
+    text-align: center;
+    font-size: 0.5em;
+    padding: 20px;
+    font-weight: 300;
+    word-spacing: 2px; 
+    color: whitesmoke;  
+}
+.footer span{
+    color: crimson;
+}
+.footer i:hover{
+    color: red;
+}
